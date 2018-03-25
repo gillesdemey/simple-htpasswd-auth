@@ -4,7 +4,8 @@
   "description": "authenticate with htpasswd files",
   "main": "index.js",
   "scripts": {
-    "test": "standard | snazzy && jest --coverage"
+    "test": "standard | snazzy && jest --coverage",
+    "coveralls": "cat coverage/lcov.info | coveralls"
   },
   "keywords": [
     "htpasswd"
@@ -16,6 +17,7 @@
   "author": "Gilles De Mey <gilles.de.mey@gmail.com>",
   "license": "ISC",
   "devDependencies": {
+    "coveralls": "^3.0.0",
     "jest": "^22.4.3",
     "snazzy": "^7.1.1",
     "standard": "^11.0.1"
