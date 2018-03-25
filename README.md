@@ -1,21 +1,20 @@
-# htpasswd-auth [![Circle CI](https://circleci.com/gh/dickeyxxx/htpasswd-auth/tree/master.svg?style=svg)](https://circleci.com/gh/dickeyxxx/htpasswd-auth/tree/master)
-
+# htpasswd-auth [![Build Status](https://travis-ci.org/gillesdemey/simple-htpasswd-auth.svg?branch=master)](https://travis-ci.org/gillesdemey/simple-htpasswd-auth)
 read/write htpasswd files
 
 ## Setup
 
 ```js
-npm install --save htpasswd-auth
+npm install --save simple-htpasswd-auth
 ```
 
 ## Checking if a password is valid
 
 ```js
-var htpasswd = require('htpasswd-auth');
-var file     = fs.readFileSync('./path-to-htpasswd');
+const htpasswd = require('htpasswd-auth')
+const file = fs.readFileSync('./path-to-htpasswd')
 
-htpasswd.authenticate('dickeyxxx', 'pass', file)
-.then(function (auth) {
-  // auth is true if the password is valid
-});
+htpasswd.authenticate('username', 'password', file)
+  .then(function (auth) {
+    // auth is true if the password is valid
+  })
 ```
