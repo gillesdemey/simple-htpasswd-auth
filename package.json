@@ -1,28 +1,30 @@
 {
-  "name": "htpasswd-auth",
-  "version": "2.0.0",
+  "name": "simple-htpasswd-auth",
+  "version": "1.0.0",
   "description": "authenticate with htpasswd files",
   "main": "index.js",
   "scripts": {
-    "test": "jshint . && mocha"
+    "test": "standard | snazzy && jest --coverage"
   },
   "keywords": [
     "htpasswd"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/dickeyxxx/htpasswd-auth"
+    "url": "https://github.com/gillesdemey/simple-htpasswd-auth"
   },
-  "author": "Jeff Dickey (@dickeyxxx)",
+  "author": "Gilles De Mey <gilles.de.mey@gmail.com>",
   "license": "ISC",
   "devDependencies": {
-    "mocha": "*",
-    "chai": "*",
-    "jshint": "*"
+    "jest": "^22.4.3",
+    "snazzy": "^7.1.1",
+    "standard": "^11.0.1"
   },
   "dependencies": {
     "apache-crypt": "^1.0.8",
     "apache-md5": "^1.0.0",
-    "bcrypt": "^0.8.3"
+    "bcrypt": "^0.8.3",
+    "concat-stream": "^1.6.2",
+    "p-any": "^1.1.0"
   }
 }
